@@ -1,0 +1,49 @@
+{
+  "name": "sunnysideup/payment-verifone",
+  "description": "Allows you to pay with verifone. Basic module.",
+  "type": "silverstripe-vendormodule",
+  "keywords": [
+    "verifone",
+    "payment",
+    "payment gateway",
+    "ecommerce",
+    "credit card",
+    "pay"
+  ],
+  "license": "BSD-3-Clause",
+  "require": {
+    "silverstripe/framework": "^5.0",
+    "silverstripe/admin": "^2.0"
+  },
+  "require-dev": {
+    "sunnysideup/sswebpack_engine_only": "dev-master",
+    "silverleague/ideannotator": "*",
+    "phpunit/phpunit": "^9.6",
+    "squizlabs/php_codesniffer": "^3.7",
+    "silverstripe/standards": "^1",
+    "phpstan/extension-installer": "^1.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Sunnysideup/PaymentVerifone\\": "src/"
+    }
+  },
+  "extra": {
+    "expose": [
+      "client/dist"
+    ]
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "bin": [
+    "bin/npm-build-payment-verifone.sh",
+    "bin/npm-watch-payment-verifone.sh"
+  ],
+  "authors": [
+    {
+      "name": "Nicolaas Thiemen Francken",
+      "email": "modules@sunnysideup.co.nz",
+      "role": "lead developer"
+    }
+  ]
+}
