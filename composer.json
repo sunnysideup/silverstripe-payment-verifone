@@ -1,36 +1,36 @@
 {
-  "name": "sunnysideup/payment-verifone",
-  "description": "Allows you to pay with verifone. Basic module.",
-  "type": "silverstripe-vendormodule",
-  "keywords": [
-    "verifone",
-    "payment",
-    "payment gateway",
-    "ecommerce",
-    "credit card",
-    "pay"
-  ],
-  "license": "BSD-3-Clause",
-  "require": {
-    "silverstripe/framework": "^3 || ^4 || ^5.0"
-  },
-  "autoload": {
-    "psr-4": {
-      "Sunnysideup/PaymentVerifone\\": "src/"
-    }
-  },
-  "extra": {
-    "expose": [
-      "client/dist"
+    "name": "sunnysideup/payment-verifone",
+    "description": "Allows you to pay with verifone. Basic module.",
+    "type": "silverstripe-vendormodule",
+    "keywords": [
+        "verifone",
+        "payment",
+        "payment gateway",
+        "ecommerce",
+        "credit card",
+        "pay"
+    ],
+    "license": "BSD-3-Clause",
+    "require": {
+        "silverstripe/framework": "^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sunnysideup/PaymentVerifone\\": "src/"
+        }
+    },
+    "extra": {
+        "expose": [
+            "client/dist"
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "authors": [
+        {
+            "name": "Nicolaas Thiemen Francken",
+            "email": "modules@sunnysideup.co.nz",
+            "role": "lead developer"
+        }
     ]
-  },
-  "minimum-stability": "dev",
-  "prefer-stable": true,
-  "authors": [
-    {
-      "name": "Nicolaas Thiemen Francken",
-      "email": "modules@sunnysideup.co.nz",
-      "role": "lead developer"
-    }
-  ]
 }

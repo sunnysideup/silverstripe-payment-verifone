@@ -18,7 +18,7 @@ use stdClass;
 class Connect
 {
 
-    function createCheckout(float $amount, string $currencyCode, string $entityId, string $paymentMethod, string $merchantReference, string $returnUrl): void
+    public function createCheckout(float $amount, string $currencyCode, string $entityId, string $paymentMethod, string $merchantReference, string $returnUrl): void
     {
         $url = 'https://YOUR_VERIFONE_API_ENDPOINT/v2/checkout';
         $apiKey = 'YOUR_API_KEY';
@@ -37,7 +37,7 @@ class Connect
 
         $options = [
             'http' => [
-                'header' => "Content-Type: application/json\r\nAuthorization: Bearer $apiKey\r\n",
+                'header' => "Content-Type: application/json\r\nAuthorization: Bearer {$apiKey}\r\n",
                 'method' => 'POST',
                 'content' => json_encode($data)
             ]
@@ -53,7 +53,7 @@ class Connect
         $responseData = json_decode($response, true);
         $checkoutUrl = $responseData['url'];
 
-        header("Location: $checkoutUrl");
+        header('Location: ' . $checkoutUrl);
         exit;
     }
 }
